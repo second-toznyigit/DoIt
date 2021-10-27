@@ -27,11 +27,17 @@ public class HomeWatcher {
         if (mRecevier != null) {
             mContext.registerReceiver(mRecevier, mFilter);
         }
+        else{
+            System.out.println('Some error occured');
+        }
     }
 
     public void stopWatch() {
         if (mRecevier != null) {
             mContext.unregisterReceiver(mRecevier);
+        }
+        else{
+            System.out.println('Some error occured');
         }
     }
 
